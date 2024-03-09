@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     @user = User.find_by({"email" => params["email"]})
     if @user != nil
       # 2. if the user exists -> check if they know their password
-      if @user["password"] == params["password"]
+      if BCrypt::Password.new(@user["password"]) == params["password"]
         # 3. if they know their password -> login is successful
         # 4. if the user doesn't exist or they don't know their password -> login fails
         flash["notice"] = "Welcome."
