@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
         # 3. if they know their password -> login is successful
         # 4. if the user doesn't exist or they don't know their password -> login fails
         flash["notice"] = "Welcome."
-        redirect_to "/companies"
+        redirect_to "/places"
       else
         flash["notice"] = "Nope."
         redirect_to "/login"
