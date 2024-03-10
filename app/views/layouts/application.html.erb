@@ -28,6 +28,7 @@
       <span class="navbar-text">
         <% @user = User.find_by({ "id" => session["user_id"] }) %>
         <% if @user == nil %>
+           <a href="/login" class="btn btn-default"> Home </a>          
           <a href="/users/new" class="btn btn-default">Sign Up</a>
           |
           <a href="/login" class="btn btn-primary">Login</a>
@@ -37,7 +38,6 @@
           <a href="/logout" class="btn btn-default">Logout</a>
         <% end %>
 
-  <!-- <a href="/posts/new/" class="subtitle btn btn-dark">New Post</a>-->
       </span>
     </div>
   </nav>
