@@ -24,11 +24,10 @@
 <body>
   <nav class="navbar bg-primary mb-3" data-bs-theme="dark">
     <div class="container">
-      <h2 class="navbar-brand">Travel Journal</h2>
+      <a href="/" class="navbar-brand"> Home </a> 
       <span class="navbar-text">
         <% @user = User.find_by({"id" => session["user_id"]}) %>
-        <% if @user == nil %>
-          <a href="/" class="btn btn-default"> Home </a>          
+        <% if @user == nil %>        
           <a href="/login" class="btn btn-primary">Login</a>
           |
           <a href="/users/new" class="btn btn-default">Sign Up</a>
