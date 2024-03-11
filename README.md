@@ -2,6 +2,3 @@
 
 https://travel-final-praveen.onrender.com
 
-Username = praveen
-Email = praveen
-Password = praveen
